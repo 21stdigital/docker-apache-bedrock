@@ -36,7 +36,7 @@ RUN set -ex; \
 	rm -rf /var/lib/apt/lists/*
 
 COPY ./apache/bedrock.conf /etc/apache2/sites-available/bedrock.conf
-COPY ./php/bedrock-php.ini /usr/local/etc/php/conf.d/bedrock-php.ini
+COPY ./php/bedrock-php.dev.ini /usr/local/etc/php/conf.d/bedrock-php.ini
 
 RUN a2dissite 000-default && a2ensite bedrock
 
